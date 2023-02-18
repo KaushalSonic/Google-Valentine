@@ -14,7 +14,7 @@
 :root{
     --bg-col: #222222;
     --font-col: #bf7fd4;
-    --drop-col: #7749a9;
+    --drop-col:  #9565c8;
     --heart-col: #bf7fd4;
 }
 
@@ -27,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: scroll;
 }
 
 /* Middle main container */
@@ -185,12 +186,18 @@ p{
 
 .gle{
     position: relative;
-    left: -30px;
+    left: -33px;
     letter-spacing: -5px;
 }
 #slanted-e{
     position: absolute;
     top: 5px;
-    left: 92px;
+    left: 95%;
     transform: rotate(-23deg);
+}
+
+@media screen and (max-width: 500px) {
+    .gle{
+        left: 10px;
+    }
 }
