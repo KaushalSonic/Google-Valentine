@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
+
+/* setting defaults to 0 */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Assigning hex color codes to variables */
+
+:root{
+    --bg-col: #222222;
+    --font-col: #bf7fd4;
+    --drop-col: #7749a9;
+    --heart-col: #bf7fd4;
+}
+
+/* Wrapper class */
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Middle main container */
+
+.container{
+    width: 30em;
+    height: 12em;
+    /* border: 1px solid blue; */
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    /* border: 1px solid wheat; */
+    width: 100%;
+    height: 55%;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+
+/* Two shapes: drop & heart */
+
+.shapes{
+    position: relative;
+    /* border: 1px solid orange; */
+    width: 35%;
+    height: 100%;
+}
+
+/* Building drop shape */
+
+.shapes .drop-shape{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: -18px;
+    top: 20px;
+    background-color: var(--drop-col);
+    border-radius: 100% 0% 55% 45% / 55% 0% 100% 45%;
+    transform: translateY(50px);
+    transform:rotate(-45deg);
+    z-index: 20;
+}
+
+/* Making eyes */
+
+.shapes .drop-shape .eyes{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.shapes .drop-shape .eyes::before{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+.shapes .drop-shape .eyes:nth-child(1){
+    left: 20px;
+    top: 15px;
+}
+
+.shapes .drop-shape .eyes:nth-child(2){
+    left: 45px;
+    top: 40px;
+}
+
+.shapes .drop-shape .smile{
+    position: absolute;
+    transform: rotate(45deg);
+    width: 38px;
+    top: 37px;
+    left: 13px;
+}
+
+/* Making Heart shape */
+
+.shapes .heart-shape{
+    position: absolute;
+    left: 68px;
+    top: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 5%;
+    background-color: var(--heart-col);
+    transform: rotate(45deg);
+    z-index: 18;
+
+}
+
+.shapes .heart-shape::before{
+    content: "";
+    position: absolute;
+    left: -30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--heart-col);
+}
+
+.shapes .heart-shape::after{
+    content: "";
+    position: absolute;
+    top: -30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--heart-col);
+}
+
+.heart-shape .blush{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 20;
+    border: none;
+}
+.heart-shape .blush:nth-child(1){
+    top: -23px;
+    left: 30px;
+}
+.heart-shape .blush:nth-child(2){
+    top: -15px;
+    left: 45px;
+}
+.heart-shape .blush:nth-child(3){
+    top: -13px;
+    left: 46.5px;
+}
+.heart-shape .blush:nth-child(4){
+    top: -10px;
+    left: 49px;
+}
+.heart-shape .blush:nth-child(5){
+    top: -8px;
+    left: 50px;
+}
+
+p{
+    color: var(--font-col);
+    font-size: 8em;
+}
+
+.gle{
+    position: relative;
+    left: -30px;
+    letter-spacing: -5px;
+}
+#slanted-e{
+    position: absolute;
+    top: 5px;
+    left: 92px;
+    transform: rotate(-23deg);
+}
